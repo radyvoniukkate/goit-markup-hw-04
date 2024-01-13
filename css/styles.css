@@ -15,6 +15,7 @@ img{
 
 .header{
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -47,11 +48,12 @@ img{
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current{
   position:relative;
-  color: #404BBF;
+  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -98,6 +100,7 @@ img{
 .address-links .link {
   text-decoration: none;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-links .link:hover {
@@ -140,9 +143,10 @@ align-items: center;
   padding: 188px 0;
   max-width: 1440px;
   margin: 0 auto;
-background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),  url("..//images/people-office\ 1.png");
+background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),  url("..//images/people-office.jpg");
 background-repeat: no-repeat;
 background-size:cover;
+background-position: center;
 }
 
 .main-title {
@@ -174,6 +178,7 @@ background-size:cover;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:focus {
@@ -282,7 +287,6 @@ margin-bottom: 8px;
   margin: 0;
 }
 
-
 .social-link{
   width: 40px;
   height: 40px;
@@ -298,6 +302,10 @@ margin-bottom: 8px;
   transition:250ms;
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ .icon{
+ fill: #f4f4fd;
 }
 
 .benefit .list-title{
@@ -373,9 +381,9 @@ padding: 32px 0;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .portfolio-item{
   position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cover-wrap{
@@ -383,26 +391,24 @@ padding: 32px 0;
   overflow: hidden;
 }
 
-.portfolio-item:hover .overlay{
+.portfolio-item:hover .overlay-text{
   transform: translateY(0%);
-}
-
-.overlay{
-  position: absolute;
-  top:0;
-  background-color: #4D5AE5;
-  height: 100%;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-  transform: translateY(100%);
-  transition: transform 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-text{
   color: #f4f4fd;
-  max-width: 296px;
+  line-height: 1.5; 
+  letter-spacing: 0.02em;
+  top: 0;
+  font-size: 16px;
+  padding: 40px 32px;
+  position: absolute;
+background-color: #4D5AE5;
+width: 100%;
+height: 100%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
 }
 
 .portfolio-item .card-content{
@@ -428,6 +434,7 @@ padding: 32px 0;
 
 .footer-container{
   display: flex;
+  align-items: baseline
 }
 
 .footer .text {
@@ -441,7 +448,7 @@ padding: 32px 0;
 .footer .container{
   max-width: 264px;
   margin-left: 156px;
-  margin-right: 0;
+  margin-right: 120px;
 }
 
 .footer .logo-link {
@@ -461,14 +468,15 @@ padding: 32px 0;
   color: #f4f4fd;
 }
 
-.social-media{
-  margin-left: 120px;
-}
 
 .footer-media-title{
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 16px;
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  
 }
 
 .list-social-links-footer{
