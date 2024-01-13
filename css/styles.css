@@ -480,7 +480,7 @@ padding: 32px 0;
   margin: 0;
 }
 
-.social-link:hover, .social-link:focus{
+.list-social-links-footer .social-link:hover, .list-social-links-footer .social-link:focus{
   background-color: #31D0AA;
   transition:250ms;
   transition-property: background-color;
